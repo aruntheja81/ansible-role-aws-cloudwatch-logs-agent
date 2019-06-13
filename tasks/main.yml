@@ -34,7 +34,7 @@
       state: restarted
       enabled: yes
   # If not Amazon Linux 2
-  when: not (ansible_distribution == 'Amazon' and ansible_distribution_major_version is version('2', '=='))
+  when: not (ansible_distribution == "Amazon" and ansible_distribution_major_version is version("2", "=="))
 
 - block:
   - name: "Restart awslogsd service."
@@ -43,4 +43,4 @@
       state: restarted
       enabled: yes
   # If amazon linux 2
-  when: ansible_distribution == 'Amazon' and ansible_distribution_major_version is version('2', '==')
+  when: ansible_distribution == "Amazon" and ansible_distribution_major_version is version("2", "==")
